@@ -1,73 +1,128 @@
-# React + TypeScript + Vite
+<p align="center">
+  <img src="src/assets/Gemini_Generated_Image_wxyh3ewxyh3ewxyh-removebg-preview.png" alt="Notepad-plusplus Banner" width="400"/>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">Notepad-plusplus</h1>
+<p align="center">A modern, feature-rich note-taking application.</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/License-No%20License-lightgrey" alt="License: No License">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white" alt="React">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white" alt="Vite">
+  <img src="https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white" alt="SCSS">
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white" alt="Supabase">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
+This project is a modern note-taking application built with a focus on rich text editing and a clean user interface. It provides functionalities for creating, managing, and viewing notes through a dashboard, leveraging Tiptap for advanced content editing and Supabase for backend services.
 
-## React Compiler
+## ✨ Features
+*   **Rich Text Editor:** Comprehensive editing features including bold, italic, underline, strikethrough, code blocks, blockquotes, ordered/unordered lists, checklists, multiple heading levels, and horizontal rules.
+*   **Text Formatting:** Support for text alignment (left, center, right, justify) and text highlighting.
+*   **Media Embedding:** Ability to upload and embed images directly into notes.
+*   **Link Management:** Easy insertion, editing, and removal of hyperlinks.
+*   **Undo/Redo:** Full control over content changes with undo and redo history.
+*   **Note Management:** Dedicated pages for creating, viewing, and organizing notes.
+*   **Dashboard View:** A centralized dashboard for an overview of your notes.
+*   **Theme Toggle:** Switch between light and dark modes for preferred viewing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Installation
+To get a local copy up and running, follow these simple steps.
 
-## Expanding the ESLint configuration
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/Notepad-plusplus.git
+    cd Notepad-plusplus
+    ```
+    *(Replace `your-username/Notepad-plusplus.git` with the actual repository URL)*
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will typically start on `http://localhost:5173`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
+*   **Languages:** TypeScript, SCSS, CSS, JavaScript, HTML
+*   **Frontend Framework:** React
+*   **Build Tool:** Vite
+*   **Rich Text Editor Library:** Tiptap
+*   **Backend as a Service:** Supabase
+*   **Linting:** ESLint
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+.
+├── components.json
+├── index.html
+├── public/
+│   ├── google.png
+│   └── vite.svg
+└── src/
+    ├── App.css
+    ├── App.tsx
+    ├── Pages/
+    │   ├── CreateNote.tsx
+    │   ├── Dashboard.tsx
+    │   ├── Landing.tsx
+    │   └── Note.tsx
+    ├── assets/
+    │   ├── Gemini_Generated_Image_wxyh3ewxyh3ewxyh-removebg-preview.png
+    │   ├── google.png
+    │   └── react.svg
+    ├── components/
+    │   ├── tiptap-extension/
+    │   │   └── node-background-extension.ts
+    │   ├── tiptap-icons/
+    │   │   ├── align-center-icon.tsx
+    │   │   ├── blockquote-icon.tsx
+    │   │   ├── bold-icon.tsx
+    │   │   └── ... (many more icon components)
+    │   ├── tiptap-node/
+    │   │   ├── blockquote-node/ (...)
+    │   │   ├── code-block-node/ (...)
+    │   │   ├── heading-node/ (...)
+    │   │   ├── horizontal-rule-node/ (...)
+    │   │   ├── image-node/ (...)
+    │   │   ├── image-upload-node/ (...)
+    │   │   ├── list-node/ (...)
+    │   │   └── paragraph-node/ (...)
+    │   ├── tiptap-templates/
+    │   │   └── simple/
+    │   │       ├── data/
+    │   │       ├── simple-editor.scss
+    │   │       ├── simple-editor.tsx
+    │   │       └── theme-toggle.tsx
+    │   ├── tiptap-ui-primitive/
+    │   │   ├── badge/ (...)
+    │   │   ├── button/ (...)
+    │   │   ├── card/ (...)
+    │   │   └── ... (many more UI primitive components)
+    │   ├── tiptap-ui/
+    │   │   ├── blockquote-button/ (...)
+    │   │   ├── code-block-button/ (...)
+    │   │   ├── color-highlight-button/ (...)
+    │   │   └── ... (many more Tiptap UI components)
+    │   └── ui/
+    │       └── comic-text.tsx
+    ├── hooks/
+    │   ├── use-composed-ref.ts
+    │   ├── use-cursor-visibility.ts
+    │   ├── use-element-rect.ts
+    │   └── ... (many more custom hooks)
+    ├── index.css
+    ├── lib/
+    │   ├── supabase.ts
+    │   ├── tiptap-utils.ts
+    │   └── utils.ts
+    ├── main.tsx
+    └── styles/
+        ├── _keyframe-animations.scss
+        └── _variables.scss
 ```
