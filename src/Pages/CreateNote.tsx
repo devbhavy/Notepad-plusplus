@@ -6,6 +6,7 @@ import { SimpleEditor } from "@/components/tiptap-templates/simple/simple-editor
 import type { Editor } from "@tiptap/core";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+console.log(BACKEND_URL)
 
 export function CreateNote(){
     const [editor,setEditor] = useState<Editor | null>(null);
