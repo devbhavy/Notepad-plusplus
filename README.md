@@ -53,7 +53,6 @@ To get a local copy up and running, follow these simple steps.
 *   **Frontend Framework:** React
 *   **Build Tool:** Vite
 *   **Rich Text Editor Library:** Tiptap
-*   **Backend as a Service:** Supabase
 *   **Linting:** ESLint
 
 ## 📂 Project Structure
